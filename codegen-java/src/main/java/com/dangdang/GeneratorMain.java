@@ -17,7 +17,7 @@ public class GeneratorMain {
 		final GeneratorFacade g = new GeneratorFacade();
 //		 g.printAllTableNames(); //打印数据库中的表名称
 	  //   g.clean(); // 删除生成器的输出目录
-		 g.generateByTable("city","City");
+		 g.generateByTable("customer_info","CustomerInfo");
 //		g.generateByTable("package_item");
 		// g.generateByTable("CATEGORY"); //通过数据库表生成文件,注意: oracle
 		// 需要指定schema及注意表名的大小写.
