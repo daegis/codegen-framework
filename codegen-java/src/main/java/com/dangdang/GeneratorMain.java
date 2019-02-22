@@ -1,7 +1,6 @@
 package com.dangdang;
 
 import com.dangdang.generator.GeneratorFacade;
-import com.dangdang.generator.GeneratorProperties;
 
 /**
  * 
@@ -17,7 +16,7 @@ public class GeneratorMain {
 		final GeneratorFacade g = new GeneratorFacade();
 //		 g.printAllTableNames(); //打印数据库中的表名称
 	  //   g.clean(); // 删除生成器的输出目录
-		 g.generateByTable("customer_info","CustomerInfo");
+		 g.generateByTable("upload_img","UploadImg");
 //		g.generateByTable("package_item");
 		// g.generateByTable("CATEGORY"); //通过数据库表生成文件,注意: oracle
 		// 需要指定schema及注意表名的大小写.
@@ -25,10 +24,5 @@ public class GeneratorMain {
 		// g.generateByTable("table_name","TableName"); //通过数据库表生成文件,并可以自定义类名
 		// g.generateByAllTable(); //自动搜索数据库中的所有表并生成文件
 		// g.generateByClass(Blog.class);
-		// 打开文件夹
-		Runtime.getRuntime().exec(
-				"cmd.exe /c start "
-						+ GeneratorProperties.getRequiredProperty("outRoot")
-						+ "\\codegen-output");
 	}
 }
