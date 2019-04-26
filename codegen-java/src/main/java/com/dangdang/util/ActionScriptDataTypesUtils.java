@@ -67,7 +67,7 @@ public class ActionScriptDataTypesUtils {
 
 		preferredAsTypeForJavaType.put("java.sql.Date", "Date");
 		preferredAsTypeForJavaType.put("java.sql.Time", "Date");
-		preferredAsTypeForJavaType.put("java.util.Date", "Date");
+		preferredAsTypeForJavaType.put("java.time.LocalDateTime", "Date");
 		preferredAsTypeForJavaType.put("java.sql.Timestamp", "Date");
 
 	}

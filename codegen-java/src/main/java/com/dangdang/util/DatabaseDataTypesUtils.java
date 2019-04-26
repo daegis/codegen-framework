@@ -62,8 +62,8 @@ public class DatabaseDataTypesUtils {
 	}
 
    static {
-      _preferredJavaTypeForSqlType.put(Types.TINYINT, "Byte");
-      _preferredJavaTypeForSqlType.put(Types.SMALLINT, "Short");
+      _preferredJavaTypeForSqlType.put(Types.TINYINT, "Integer");
+      _preferredJavaTypeForSqlType.put(Types.SMALLINT, "Integer");
       _preferredJavaTypeForSqlType.put(Types.INTEGER, "Integer");
       _preferredJavaTypeForSqlType.put(Types.BIGINT, "Long");
       _preferredJavaTypeForSqlType.put(Types.REAL, "Float");
@@ -80,9 +80,9 @@ public class DatabaseDataTypesUtils {
       _preferredJavaTypeForSqlType.put(Types.BINARY, "byte[]");
       _preferredJavaTypeForSqlType.put(Types.VARBINARY, "byte[]");
       _preferredJavaTypeForSqlType.put(Types.LONGVARBINARY, "byte[]");
-      _preferredJavaTypeForSqlType.put(Types.DATE, "java.util.Date");
-      _preferredJavaTypeForSqlType.put(Types.TIME, "java.util.Date");
-      _preferredJavaTypeForSqlType.put(Types.TIMESTAMP, "java.util.Date");
+      _preferredJavaTypeForSqlType.put(Types.DATE, "java.time.LocalDateTime");
+      _preferredJavaTypeForSqlType.put(Types.TIME, "java.time.LocalDateTime");
+      _preferredJavaTypeForSqlType.put(Types.TIMESTAMP, "java.time.LocalDateTime");
 //      _preferredJavaTypeForSqlType.put(Types.TIMESTAMP, "java.sql.Timestamp");
       _preferredJavaTypeForSqlType.put(Types.CLOB, "String");
       _preferredJavaTypeForSqlType.put(Types.BLOB, "byte[]");

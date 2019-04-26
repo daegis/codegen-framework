@@ -5,12 +5,14 @@
 package ${basepackage}.model;
 
 import java.io.Serializable;
+import lombok.Data;
 
 <#include "/java_imports.include">
 
 /**
  * ${className} Entity.
  */
+@Data
 public class ${className} implements Serializable{
 	
 	//列信息
@@ -19,22 +21,19 @@ public class ${className} implements Serializable{
 	
 	</#list>
 
-<@generateJavaColumns/>
-<@generateJavaOneToMany/>
-<@generateJavaManyToOne/>
 }
 
 <#macro generateJavaColumns>
 	<#list table.columns as column>
-		
+
 	public void set${column.columnName}(${column.javaType} value) {
 		this.${column.columnNameLower} = value;
 	}
-	
+
 	public ${column.javaType} get${column.columnName}() {
 		return this.${column.columnNameLower};
 	}
-		
+
 	</#list>
 </#macro>
 

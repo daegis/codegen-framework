@@ -1,8 +1,8 @@
 package com.dangdang.java.model;
 
-import java.lang.reflect.Field;
-
 import com.dangdang.util.ActionScriptDataTypesUtils;
+
+import java.lang.reflect.Field;
 
 public class JavaField {
 	private Field field;
@@ -31,7 +31,7 @@ public class JavaField {
 	}
 
 	public boolean getIsDateTimeField() {
-		return  getJavaType().equalsIgnoreCase("java.util.Date")
+		return  getJavaType().equalsIgnoreCase("java.time.LocalDateTime")
 				|| getJavaType().equalsIgnoreCase("java.sql.Date")
 				|| getJavaType().equalsIgnoreCase("java.sql.Timestamp")
 				|| getJavaType().equalsIgnoreCase("java.sql.Time");
